@@ -85,8 +85,8 @@ int main() {
         cout << "2. Gunakan HP Pot" << endl;
         cout << "3. Gunakan Mana Pot" << endl;
         cout << "4. Ganti Pedang" << endl;
-        cout << "5. Tampilkan Statistik" << endl;
-        cout << "6. Tampilkan Inventory" << endl;
+        cout << "5. Tampilkan Stat" << endl;
+        cout << "6. Tampilkan Item" << endl;
         cout << "7. Keluar" << endl;
         cout << "Masukkan pilihan (1-7): ";
         cin >> choice;
