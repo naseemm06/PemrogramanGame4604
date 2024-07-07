@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=3 uid="uid://c66q7pgxsgeq8"]
+
+[ext_resource type="Script" path="res://scenes/witch.gd" id="1_g4ogf"]
+[ext_resource type="Texture2D" uid="uid://cqu63xb7iwqwu" path="res://asset/Witch/witch depan jalan - 20x20/WitchDepanJalan.png" id="1_srdto"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hccr"]
+atlas = ExtResource("1_srdto")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifk5g"]
+atlas = ExtResource("1_srdto")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0j2ip"]
+atlas = ExtResource("1_srdto")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gf88x"]
+atlas = ExtResource("1_srdto")
+region = Rect2(60, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gsi43"]
+atlas = ExtResource("1_srdto")
+region = Rect2(80, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lb2rs"]
+atlas = ExtResource("1_srdto")
+region = Rect2(100, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uda28"]
+atlas = ExtResource("1_srdto")
+region = Rect2(120, 0, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_45wle"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hccr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifk5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0j2ip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gf88x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gsi43")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lb2rs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uda28")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ggfwr"]
+radius = 8.0
+
+[node name="witch" type="CharacterBody2D"]
+script = ExtResource("1_g4ogf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_45wle")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_ggfwr")

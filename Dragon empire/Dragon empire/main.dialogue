@@ -1,0 +1,62 @@
+~ main
+
+if global.king_no == false
+	if global.king_yes == true
+		Penyihir: Apakah kamu yang bernama Esdras?
+		- Ya, aku Esdras?
+			Esdras: Aku tahu kamu, penyihir yang telah mempengaruhi kaisar dengan sihir gelapmu. Apa tujuanmu datang ke sini?
+			Esdras: Jika kamu mencari pertempuran, aku tidak akan mundur.
+			Penyihir:  Oh, Esdras, pahlawan yang naif.
+			Penyihir:  Kamu benar, aku yang mempengaruhi kaisar, tapi bukan untuk kejahatan, melainkan untuk membuka matanya akan kebenaran.
+			Esdras: Aku akan menggunakan kekuatanku untuk mengakhiri tipu dayamu dan membebaskan negeri ini dari cengkeramanmu! 
+			Penyihir: Kekuatanmu mungkin besar, tapi tidak ada gunanya melawan sihir yang telah berakar dalam.
+			Penyihir: Dan naga milikmu hanya mainan bagi kekuatanku
+			Penyihir:  Datang ke sini adalah kesalahanmu, dan aku akan memastikan itu menjadi kesalahan terakhirmu!  
+			set global.king_no = true
+			set global.king_yes == false
+			=> END
+#		- I think i have something for you.
+#			Witch: Oh.... really?
+#			- Yes found something with your name on it
+#				if global.king_yes == true :
+#					King: Ahh, a chest, i must have dropped it, thank you so munch!
+#					set global.king_no = true
+#					=> END
+#				else:
+#					Witch: Ahh,weird it has my name,but thats not mine!
+#					Witch: thanks for letting me know!
+#					=> END
+#			- no, i lied => END
+#		- goodbye, => END
+		- Tidak perlu kata-kata lagi, tindakan kita akan berbicara..
+			Esdras: Ayo tunjukkan kekuatanmu, penyihir! Aku tidak takut dengan trik-trikmu.
+			Penyihir: Hahaha, Esdras! Beraninya kamu menantangku.
+			Penyihir: Aku telah menunggu saat ini, saat di mana aku bisa menguji kekuatanmu yang legendaris.
+			Esdras: Pertarungan ini akan menentukan nasib kerajaan kita.
+			Esdras:  Siapkan dirimu, karena aku tidak akan menahan diri! 
+			Penyihir:  Mari kita lihat apakah kamu sebanding dengan cerita-cerita yang mereka nyanyikan tentangmu.
+			Penyihir: Bersiaplah, karena pertarungan ini akan menjadi pertunjukan sihir yang belum pernah kamu lihat sebelumnya!
+			set global.king_no = true
+			set global.king_yes == false
+			=> END
+	else:
+		=> END
+#		- Yes found something with your name on it
+#			if global.king_yes == true :
+#				Witch: Ahh, a chest, i must have dropped it, thank you so munch!
+#				set global.king_no = true
+#				=> END
+#			else:
+#				Witch: Ahh,weird it has my name,but thats not mine!
+#				Witch: thanks for letting me know!
+#				=> END
+#		- no, i lied => END
+#	- goodbye, => END
+else:
+#	Witch: [[Hi|Hello|Howdy]], thank you somuch for finding my chest!
+#	Witch: i dont know what i would have done without you
+#	Witch: i am working on a massive suprise for you! 
+	Penyihir: ......
+	=> END
+
+=> END
